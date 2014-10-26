@@ -10,6 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var textName: UITextField!
+    @IBOutlet weak var LabelText: UILabel!
+    
+    
+    @IBAction func pressButton(sender: AnyObject) {
+        LabelText.text=textName.text
+        LabelText.hidden=false
+        LabelText.textColor=UIColor.blueColor()
+        textName.text=""
+        textName.resignFirstResponder()
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
